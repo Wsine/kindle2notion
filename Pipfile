@@ -1,0 +1,19 @@
+[[source]]
+url = "https://pypi.org/simple"
+verify_ssl = true
+name = "pypi"
+
+[packages]
+click = ">=8.0.0"
+dateparser = ">=1.0.0"
+python-decouple = ">=3.3"
+requests = ">=2.25.0"
+pathlib = "*"
+notion-client = "*"
+DateTime = ">=4.3"
+kindle2notion = {editable = true, path = "."}
+
+[dev-packages]
+
+[requires]
+python_version = "3.9"

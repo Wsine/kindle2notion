@@ -159,3 +159,5 @@ Thumbs.db
 MyClippings.txt
 dist/
 images/
+.env.local
+My Clipping.txt

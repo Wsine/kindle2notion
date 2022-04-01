@@ -141,7 +141,7 @@ def _add_book_to_notion(
     diff_count = highlight_count - (row['properties']['Highlights']['number'] or 0)
     updated_info = {
         "Highlights": {"type": "number", "number": highlight_count},
-        "Last Highlighted": {"type": "date", "date": {'start': parse(last_date).replace(tzinfo=tzlocal()).isoformat()}},
+        #  "Last Highlighted": {"type": "date", "date": {'start': parse(last_date).replace(tzinfo=tzlocal()).isoformat()}},
         "Last Synced": {"type": "date", "date": {'start': datetime.now(tzlocal()).isoformat()}},
     }
     notion_client.pages.update(page_id=row['id'], properties=updated_info)

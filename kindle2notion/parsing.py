@@ -140,6 +140,13 @@ def _parse_page_location_date_and_note(
                 element[element.find("added on") :].replace("added on", "").strip()
             )
             date = date.strftime("%A, %d %B %Y %I:%M:%S %p")
+        if "页" in element:
+            page = element[element.find("第") : element.find("页") + 1].strip()
+        if "位置" in element:
+            location = element[element.find("位置") - 1 :].strip()
+        if "添加于" in element:
+            date = element
+
 
     return page, location, date, isNote
 
