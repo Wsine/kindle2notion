@@ -133,7 +133,7 @@ def _add_book_to_notion(
         'object': 'block',
         'type': 'paragraph',
         'paragraph': {
-            'text': chunks,
+            'rich_text': chunks,
         }
     }
     notion_client.blocks.children.append(block_id=parent_page['id'], children=[new_block])
